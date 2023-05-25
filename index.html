@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BT-JS-Buoi2-3</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Nav pills -->
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="pill" href="#ex1">Bài 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#ex2">Bài 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#ex3">Bài 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#ex4">Bài 4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="#ex5">Bài 5</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane container active mt-2 py-2" id="ex1">
+          <h3>Tính tiền lương nhân viên</h3>
+          <div class="form-group">
+            <label for="salaryPerDay">Tiền lương 1 ngày:</label>
+            <input
+              type="text"
+              id="salaryPerDay"
+              class="form-control w-25"
+              value="100000"
+              disabled
+            />
+          </div>
+          <div class="form-group">
+            <label for="workingDay">Số ngày làm:</label>
+            <input
+              type="number"
+              id="workingDay"
+              class="form-control w-25"
+              placeholder="Số ngày làm"
+            />
+          </div>
+          <button class="btn btn-success" id="btnSalary">Tính tiền!</button>
+          <div class="alert alert-success mt-2">
+            Kết quả: <span id="ex1Result"></span>
+          </div>
+        </div>
+        <div class="tab-pane container fade mt-2 py-2" id="ex2">
+          <h3>Tính giá trị trung bình của 5 số thực</h3>
+          <div class="formZone d-flex justify-content-between">
+              <div class="form-group">
+                <label for="number1">Số thứ 1:</label>
+                <input type="number" id="number1" class="form-control" placeholder="Nhập số thứ 1">
+              </div>
+              <div class="form-group">
+                <label for="number2">Số thứ 2:</label>
+                <input type="number" id="number2" class="form-control" placeholder="Nhập số thứ 2">
+              </div>
+              <div class="form-group">
+                <label for="number3">Số thứ 3:</label>
+                <input type="number" id="number3" class="form-control" placeholder="Nhập số thứ 3">
+              </div>
+              <div class="form-group">
+                <label for="number4">Số thứ 4:</label>
+                <input type="number" id="number4" class="form-control" placeholder="Nhập số thứ 4">
+              </div>
+              <div class="form-group">
+                <label for="number5">Số thứ 5:</label>
+                <input type="number" id="number5" class="form-control" placeholder="Nhập số thứ 5">
+              </div>
+          </div>
+          <button class="btn btn-success" id="btnAverage">Tính trung bình</button>
+          <div class="alert alert-success mt-2">
+            Kết quả: <span id="ex2Result"></span>
+          </div>
+        </div>
+        <div class="tab-pane container fade mt-2 py-2" id="ex3">
+          <h3>Quy đổi tiền</h3>
+          <div class="form-group">
+            <label for="currencyExchange">Số tiền cần quy đổi:</label>
+            <input type="number" id="currencyExchange" class="form-control w-25" placeholder="Nhập số tiền...">
+            <small id="helpId" class="text-muted">$1 = 23,500VND</small>
+          </div>
+          <button class="btn btn-success" id="btnCurrency">Quy đổi</button>
+          <div class="alert alert-success mt-2">
+            Kết quả: <span id="ex3Result"></span>
+          </div>
+        </div>
+        <div class="tab-pane container fade mt-2 py-2" id="ex4">
+          <h3>Tính diện tích, chu vi hình chữ nhật</h3>
+          <div class="form-group">
+            <label for="recLength">Chiều dài Hình Chữ Nhật:</label>
+            <input type="number" id="recLength" class="form-control w-25" placeholder="Nhập chiều dài HCN...">
+          </div>
+          <div class="form-group">
+            <label for="recWidth">Chiều rộng Hình Chữ Nhật:</label>
+            <input type="number" id="recWidth" class="form-control w-25" placeholder="Nhập chiều rộng HCN...">
+          </div>
+          <button class="btn btn-success" id="btnMath">Tính toán kết quả</button>
+          <div class="resultZone d-flex justify-content-around">
+              <div class="alert alert-success mt-2">
+                Diện tích Hình chữ nhật: <span id="ex4Result1"></span>
+              </div>
+              <div class="alert alert-success mt-2">
+                Chu vi Hình chữ nhật: <span id="ex4Result2"></span>
+              </div>
+          </div>
+        </div>
+        <div class="tab-pane container fade mt-2 py-2" id="ex5">
+          <h3>Tính tổng 2 ký số</h3>
+          <div class="form-group">
+            <label for="wholeNumber">Số cần tính toán:</label>
+            <input type="number" id="wholeNumber" class="form-control w-25" placeholder="Nhập số có 2 chữ số...">
+          </div>
+          <button class="btn btn-success" id="btnTotal">Tính toán kết quả</button>
+          <div class="alert alert-success mt-2">
+            Kết quả: <span id="ex5Result"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- MAIN JS -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
