@@ -20,7 +20,7 @@ btnSalary.onclick = function(){
 
     totalSalary = salaryPerDay * workingDay;
 
-    var ex1Result = document.getElementById('ex1Result').innerHTML = totalSalary.toLocaleString();
+    document.getElementById('ex1Result').innerHTML = totalSalary.toLocaleString();
 }
 
 /* Bài 2: Tính giá trị trung bình của 5 số thực */
@@ -37,7 +37,7 @@ btnSalary.onclick = function(){
  * - Output:
  *  + In kết quả ra màn hình hiển thị;
  */
-var btnAverage = document.getElementById('btnAverage').onclick = function(){
+document.getElementById('btnAverage').onclick = function(){
     var number1 = document.getElementById('number1').value * 1;
     var number2 = document.getElementById('number2').value * 1;
     var number3 = document.getElementById('number3').value * 1;
@@ -47,7 +47,7 @@ var btnAverage = document.getElementById('btnAverage').onclick = function(){
 
     averageNumber = (number1 + number2 + number3 + number4 + number5)/5;
 
-    var ex2Result = document.getElementById('ex2Result').innerHTML = averageNumber;
+    document.getElementById('ex2Result').innerHTML = averageNumber;
 }
 
 /* Bài 3: Quy đổi tiền */
@@ -63,13 +63,13 @@ var btnAverage = document.getElementById('btnAverage').onclick = function(){
  * - Output:
  *  + In kết quả ra màn hình hiển thị;
  */
-var btnCurrency = document.getElementById('btnCurrency').onclick = function(){
+document.getElementById('btnCurrency').onclick = function(){
     var currencyExchange = document.getElementById('currencyExchange').value * 1;
     var finalExchange = 0;
 
     finalExchange = currencyExchange * 23500;
 
-    var ex3Result = document.getElementById('ex3Result').innerHTML = new Intl.NumberFormat('vn-VN').format(finalExchange) + 'VND';
+    document.getElementById('ex3Result').innerHTML = new Intl.NumberFormat('vn-VN').format(finalExchange) + 'VND';
 }
 
 /* Bài 4: Tính diện tích, chu vi hình chữ nhật */
@@ -90,7 +90,7 @@ var btnCurrency = document.getElementById('btnCurrency').onclick = function(){
  * - Output:
  *  + In kết quả ra màn hình hiển thị;
  */
-var btnMath = document.getElementById('btnMath').onclick = function(){
+document.getElementById('btnMath').onclick = function(){
     var recLength = document.getElementById('recLength').value * 1;
     var recWidth = document.getElementById('recWidth').value * 1;
     var recArea = 0;
@@ -99,8 +99,8 @@ var btnMath = document.getElementById('btnMath').onclick = function(){
     recArea = recLength * recWidth;
     recPerimeter = (recLength + recWidth) * 2;
 
-    var ex4Result1 = document.getElementById('ex4Result1').innerHTML = recArea;
-    var ex4Result2 = document.getElementById('ex4Result2').innerHTML = recPerimeter;
+    document.getElementById('ex4Result1').innerHTML = recArea;
+    document.getElementById('ex4Result2').innerHTML = recPerimeter;
 }
 
 /* Bài 5: Tính tổng 2 ký số */
@@ -123,7 +123,7 @@ var btnMath = document.getElementById('btnMath').onclick = function(){
  * - Output:
  *  + In kết quả ra màn hình hiển thị;
  */
-var btnTotal = document.getElementById('btnTotal').onclick = function(){
+document.getElementById('btnTotal').onclick = function(){
     var wholeNumber = document.getElementById('wholeNumber').value * 1;
     var tens = 0;
     var units = 0;
@@ -133,5 +133,5 @@ var btnTotal = document.getElementById('btnTotal').onclick = function(){
     units = Math.floor(wholeNumber % 10);
     total = tens + units;
     
-    var ex5Result = document.getElementById('ex5Result').innerHTML = total;
+    document.getElementById('ex5Result').innerHTML = total;
 }
